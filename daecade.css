@@ -1,0 +1,185 @@
+/* Global Styles */
+body {
+    background-color: #121212;
+    color: white;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+    background: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Adjust nav to move left by 150px */
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start; /* Aligns it closer to the left */
+    margin-left: 150px; /* Moves the nav links to the left */
+}
+
+/* Nav list */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Adds spacing between links */
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #b3b3b3;
+}
+
+/* Full-Screen Hero Section */
+#hero {
+    height: 100vh; /* Makes it take the full screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('banner.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Dark Overlay for Better Visibility */
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1;
+}
+
+#hero h1,
+#hero p {
+    position: relative;
+    z-index: 2;
+}
+
+#hero h1 {
+    font-size: 4rem; /* Bigger text for better visibility */
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+
+/* About Section */
+.dark-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* Subtitles for Vision & Mission */
+.dark-section h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    color: #ffffff;
+    border-bottom: 2px solid #b3b3b3;
+    padding-bottom: 5px;
+    width: fit-content;
+}
+
+
+/* Products */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.product img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+}
