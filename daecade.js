@@ -1,4 +1,4 @@
-// Smooth Scrolling for Navigation
+
 document.querySelectorAll('nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -7,7 +7,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
-// Fade-in effect when scrolling
+
 const sections = document.querySelectorAll(".dark-section");
 const options = { threshold: 0.2 };
 
